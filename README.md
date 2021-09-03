@@ -14,4 +14,9 @@ The **French** capital is one of the most **romantic** place in the Europe. With
     2. Kansas city (MCI) to Chicago (ORD)
     3. Chicago (ORD) to Paris (TYS)
 
+- Clothes
+- Shoes
+- perfumes
+- Watch
+
 
