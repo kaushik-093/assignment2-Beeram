@@ -47,28 +47,91 @@ This table shows the data related to my favourite food items. Which I would reco
 
 ## Code Fencing 
 
- long long binpow(long long a, long long b) {  
-     if (b == 0)  
-         return 1;  
-     long long res = binpow(a, b / 2);  
-     if (b % 2)  
-         return res * res * a;  
-     else  
-         return res * res;  
- }  
+ int gcd(int a, int b) {  
+     if (!a || !b)  
+         return a | b;  
+     unsigned shift = __builtin_ctz(a | b);  
+     a >>= __builtin_ctz(a);  
+     do {  
+         b >>= __builtin_ctz(b);  
+         if (a > b)  
+             swap(a, b);  
+         b -= a;    
+     } while (b);  
+     return a << shift;  }
 
- > A recursive algorithm is an algorithm which calls itself with "smaller (or simpler)" input values, and which obtains the result for the current input by applying simple operations to the returned value for the smaller (or simpler) input. More generally if a problem can be solved utilizing solutions to smaller versions of the same problem, and the smaller versions reduce to easily solvable cases, then one can use a recursive algorithm to solve that problem. For example, the elements of a recursively defined set, or the value of a recursively defined function can be obtained by a recursive algorithm.
 
- [Recursive Algorithm](https://www.cs.odu.edu/~toida/nerzic/content/recursive_alg/rec_alg.html)
+> Stein’s algorithm or binary GCD algorithm is an algorithm that computes the greatest common divisor of two non-negative integers. Stein’s algorithm replaces division with arithmetic shifts, comparisons, and subtraction.
+
+[Stein's algorithm](https://www.geeksforgeeks.org/steins-algorithm-for-finding-gcd/)
+
+// Iterative Java program to
+// implement Stein's Algorithm
+import java.io.*;
+ 
+class GFG {
+ 
+ // Function to implement Stein's
+    // Algorithm
+    static int gcd(int a, int b)
+    {
+        // GCD(0, b) == b; GCD(a, 0) == a,
+        // GCD(0, 0) == 0
+        if (a == 0)
+            return b;
+        if (b == 0)
+            return a;
+ 
+        // Finding K, where K is the greatest
+        // power of 2 that divides both a and b
+        int k;
+        for (k = 0; ((a | b) & 1) == 0; ++k)
+        {
+            a >>= 1;
+            b >>= 1;
+        }
+ 
+        // Dividing a by 2 until a becomes odd
+        while ((a & 1) == 0)
+            a >>= 1;
+ 
+        // From here on, 'a' is always odd.
+        do
+        {
+            // If b is even, remove
+            // all factor of 2 in b
+            while ((b & 1) == 0)
+                b >>= 1;
+ 
+            // Now a and b are both odd. Swap
+            // if necessary so a <= b, then set
+            // b = b - a (which is even)
+            if (a > b)
+            {
+                // Swap u and v.
+                int temp = a;
+                a = b;
+                b = temp;
+            }
+ 
+            b = (b - a);
+        } while (b != 0);
+ 
+        // restore common factors of 2
+        return a << k;
+    }
+ 
+    // Driver code
+    public static void main(String args[])
+    {
+        int a = 34, b = 17;
+ 
+        System.out.println("Gcd of given "
+                           + "numbers is " + gcd(a, b));
+    }
+}
 
 
-  int   i, even;  
- i := 1;  
- even := 0;  
- while( i < k ) {  
-           even := even + 2;  
-           i := i + 1;  
- }  
+[Code Source](https://www.geeksforgeeks.org/steins-algorithm-for-finding-gcd/)
 
-[Code Source](https://www.cs.odu.edu/~toida/nerzic/content/recursive_alg/rec_alg.html)
 
