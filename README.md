@@ -124,7 +124,7 @@ class GFG {
         System.out.println("Gcd of given "
                            + "numbers is " + gcd(a, b));
     }
-}
+ }
 
 
 [Code Source](https://www.geeksforgeeks.org/steins-algorithm-for-finding-gcd/)
