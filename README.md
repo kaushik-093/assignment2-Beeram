@@ -47,54 +47,42 @@ This table shows the data related to my favourite food items. Which I would reco
 
 ## Code Fencing 
 
- int gcd (int a, int b) {  
-    while (b) {  
-    a %= b;  
-    swap(a, b);  
-    }  
-    return a;  
- }  
 
-
-> Stein’s algorithm or binary GCD algorithm is an algorithm that computes the greatest common divisor of two non-negative integers. Stein’s algorithm replaces division with arithmetic shifts, comparisons, and subtraction.
-
-[Stein's algorithm](https://www.geeksforgeeks.org/steins-algorithm-for-finding-gcd/)
-
-// Iterative Java program to
-// implement Stein's Algorithm
-import java.io.*;
+    // Iterative Java program to
+    // implement Stein's Algorithm
+    import java.io.*;
  
-class GFG {
+    class GFG {
  
- // Function to implement Stein's
+    // Function to implement Stein's
     // Algorithm
     static int gcd(int a, int b)
     {
-        // GCD(0, b) == b; GCD(a, 0) == a,
-        // GCD(0, 0) == 0
-        if (a == 0)
-            return b;
-        if (b == 0)
-            return a;
+    // GCD(0, b) == b; GCD(a, 0) == a,
+    // GCD(0, 0) == 0
+    if (a == 0)
+    return b;
+    if (b == 0)
+    return a;
  
-        // Finding K, where K is the greatest
-        // power of 2 that divides both a and b
-        int k;
-        for (k = 0; ((a | b) & 1) == 0; ++k)
-        {
-            a >>= 1;
-            b >>= 1;
-        }
+    // Finding K, where K is the greatest
+    // power of 2 that divides both a and b
+    int k;
+    for (k = 0; ((a | b) & 1) == 0; ++k)
+    {
+    a >>= 1;
+    b >>= 1;
+    }
  
-        // Dividing a by 2 until a becomes odd
-        while ((a & 1) == 0)
-            a >>= 1;
+    // Dividing a by 2 until a becomes odd
+    while ((a & 1) == 0)
+    a >>= 1;
  
-        // From here on, 'a' is always odd.
-        do
-        {
-            // If b is even, remove
-            // all factor of 2 in b
+    // From here on, 'a' is always odd.
+    do
+    {
+    // If b is even, remove
+    // all factor of 2 in b
             while ((b & 1) == 0)
                 b >>= 1;
  
@@ -130,3 +118,7 @@ class GFG {
 [Code Source](https://www.geeksforgeeks.org/steins-algorithm-for-finding-gcd/)
 
 
+> Stein’s algorithm or binary GCD algorithm is an algorithm that computes the greatest common divisor of two non-negative integers. Stein’s algorithm replaces division with arithmetic shifts, comparisons, and subtraction.
+
+
+[Stein's algorithm](https://www.geeksforgeeks.org/steins-algorithm-for-finding-gcd/)
