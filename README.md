@@ -21,3 +21,16 @@ The **French** capital is one of the most **romantic** place in the Europe. With
 
 **[AboutMe](AboutMe.md)**
 
+---
+## Tables
+
+This table shows the data related to my favourite food items. Which I would recommend others
+
+|FOOD|LOCATION|AMOUNT|
+|---|---|---|
+|Biryani|Paradise|$20
+|Pizza|Pizza Hut|$8|
+|Chilli Chicken|Bhawarchi|$7.69
+|Ice Cream|Cream Stone|$7
+ 
+
