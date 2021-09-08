@@ -47,13 +47,13 @@ This table shows the data related to my favourite food items. Which I would reco
 
 ## Code Fencing 
 
- int gcd (int a, int b) {
-     while (b) {
-         a %= b;
-         swap(a, b);
-     }
-     return a;
- }
+ int gcd (int a, int b) { 
+     while (b) { 
+         a %= b; 
+         swap(a, b); 
+     } 
+     return a; 
+ } 
 
 
 > Stein’s algorithm or binary GCD algorithm is an algorithm that computes the greatest common divisor of two non-negative integers. Stein’s algorithm replaces division with arithmetic shifts, comparisons, and subtraction.
