@@ -51,8 +51,8 @@ This table shows the data related to my favourite food items. Which I would reco
      while (b) {  
          a %= b;  
          swap(a, b);  
-     }  
-     return a;  
+    }  
+    return a;  
  }  
 
 
