@@ -48,9 +48,9 @@ This table shows the data related to my favourite food items. Which I would reco
 ## Code Fencing 
 
  int gcd (int a, int b) {  
-     while (b) {  
-         a %= b;  
-         swap(a, b);  
+    while (b) {  
+    a %= b;  
+    swap(a, b);  
     }  
     return a;  
  }  
