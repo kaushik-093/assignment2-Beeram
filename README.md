@@ -32,5 +32,15 @@ This table shows the data related to my favourite food items. Which I would reco
 |Pizza|Pizza Hut|$8|
 |Chilli Chicken|Bhawarchi|$7.69
 |Ice Cream|Cream Stone|$7
- 
+
+---
+
+## Quotes
+
+>If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. 
+-*James Cameron*
+
+>Life is what happens when you're busy making other plans. 
+-*John Lennon*
+
 
